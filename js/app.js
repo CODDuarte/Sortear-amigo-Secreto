@@ -1,7 +1,12 @@
 let amigos = [];
 
 function adicionar() {
-   let amigo = document.getElementById('nome-amigo').value.toUpperCase();
+   let nomeCompleto = document.getElementById('nome-amigo').value.toLowerCase();
+   let partes = nomeCompleto.split(' ');
+   for(let i = 0; i < partes.length; i++) {
+   partes[i] = partes[i].charAt(0).toUpperCase() + partes[i].slice(1);
+   }
+   let amigo = partes.join(' ');
    if (amigo == '') {
       alert('Informe o nome do amigo!');
       return;

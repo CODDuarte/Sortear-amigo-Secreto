@@ -1,6 +1,7 @@
 let amigos = [];
 
 function adicionar() {
+   // Adicionado uppercase aos nomes
    let nomeCompleto = document.getElementById('nome-amigo').value.toLowerCase();
    let partes = nomeCompleto.split(' ');
    for(let i = 0; i < partes.length; i++) {
